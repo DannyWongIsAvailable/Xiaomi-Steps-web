@@ -234,7 +234,7 @@ async function submit() {
           <path d="M12 3 5.5 5.5v5.4c0 4 2.5 7.5 6.5 9.1 4-1.6 6.5-5.1 6.5-9.1V5.5L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
           <path d="m9.4 11.8 1.7 1.7 3.6-3.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <span>账号和密码仅用于本次请求，不会写入浏览器本地存储</span>
+        <span>账号和密码仅用于本次请求，不会保存或上传</span>
       </div>
     </section>
 
@@ -256,39 +256,3 @@ async function submit() {
     </footer>
   </main>
 </template>
-
-
-<style scoped>
-.site-footer {
-  margin-top: 28px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
-  text-align: center;
-}
-
-.footer-text {
-  margin: 0 0 10px;
-  color: #94a3b8;
-  font-size: 12px;
-  letter-spacing: .02em;
-}
-
-.repo-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #64748b;
-  font-size: 12px;
-  text-decoration: none;
-  transition: color .2s ease;
-}
-
-.repo-link svg {
-  width: 14px;
-  height: 14px;
-}
-
-.repo-link:hover {
-  color: #2563eb;
-}
-</style>
