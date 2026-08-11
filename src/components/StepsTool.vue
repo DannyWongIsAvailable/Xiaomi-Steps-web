@@ -238,6 +238,57 @@ async function submit() {
       </div>
     </section>
 
-    <p class="footer-text">Zepp Life Steps · Cloudflare Pages Functions</p>
+    <footer class="site-footer">
+      <p class="footer-text">Zepp Life Steps · Cloudflare Pages Functions</p>
+
+      <a
+        class="repo-link"
+        href="https://github.com/DannyWongIsAvailable/Xiaomi-Steps-web.git"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Xiaomi Steps web GitHub repository"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23A11.4 11.4 0 0 1 12 5.84c1.02 0 2.04.14 3 .42 2.29-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/>
+        </svg>
+        <span>View source on GitHub</span>
+      </a>
+    </footer>
   </main>
 </template>
+
+
+<style scoped>
+.site-footer {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0 0 10px;
+  color: #94a3b8;
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.repo-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.repo-link:hover {
+  color: #2563eb;
+}
+</style>
