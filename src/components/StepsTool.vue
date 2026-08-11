@@ -132,7 +132,7 @@ async function submit() {
               v-model="account"
               type="text"
               autocomplete="username"
-              placeholder="邮箱或手机号"
+              placeholder="Zepp Life 登录账号"
               :disabled="loading"
               @input="resetResult"
             />
