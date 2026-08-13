@@ -126,5 +126,5 @@ Root directory: /
 
 ## License
 
-[LICENSE](LICENSE)
+[LICENSE](LICENSE)  
 仅供学习和技术研究使用，请遵守相关平台服务协议。
