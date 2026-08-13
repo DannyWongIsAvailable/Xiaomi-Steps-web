@@ -5,6 +5,7 @@ import { modifySteps } from '../api/huami'
 
 const MIN_RANDOM_STEPS = 25000
 const MAX_RANDOM_STEPS = 50000
+const MAX_STEPS = 98800
 
 function createRandomSteps() {
   return Math.floor(Math.random() * (MAX_RANDOM_STEPS - MIN_RANDOM_STEPS + 1)) + MIN_RANDOM_STEPS
@@ -54,9 +55,9 @@ async function submit() {
     return
   }
 
-  if (!Number.isInteger(parsedSteps) || parsedSteps <= 0) {
+  if (!Number.isInteger(parsedSteps) || parsedSteps <= 0 || parsedSteps > MAX_STEPS) {
     statusType.value = 'error'
-    statusMessage.value = '请输入有效的目标步数。'
+    statusMessage.value = '目标步数必须为 1–98,800 之间的整数。'
     return
   }
 
@@ -117,7 +118,7 @@ async function submit() {
           <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
           <path d="M12 10.2v5.1M12 7.2v.15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span>请使用可通过账号密码登录的 Zepp Life 账号；一键登录方式不适用。</span>
+        <span>请先通过账号密码注册 Zepp Life 账号；一键登录方式不适用。</span>
       </div>
 
       <form class="form" @submit.prevent="submit">
@@ -184,6 +185,7 @@ async function submit() {
                 type="number"
                 inputmode="numeric"
                 min="1"
+                max="98800"
                 step="1"
                 placeholder="目标步数"
                 :disabled="loading"

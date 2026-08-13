@@ -1,6 +1,7 @@
 const APP_NAME = 'com.xiaomi.hm.health'
 const USER_AGENT = 'MiFit/6.12.0 (MCE16; Android 16; Density/1.5)'
 const DEVICE_ID = '0000000000000000'
+const MAX_STEPS = 98800
 
 const FORM_HEADERS = {
   'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -193,8 +194,8 @@ export async function onRequestPost(context) {
 
     if (!account) return json({ success: false, message: '请输入 Zepp Life 账号。' }, 400)
     if (!password) return json({ success: false, message: '请输入 Zepp Life 密码。' }, 400)
-    if (!Number.isInteger(steps) || steps <= 0) {
-      return json({ success: false, message: '请输入有效的目标步数。' }, 400)
+    if (!Number.isInteger(steps) || steps <= 0 || steps > MAX_STEPS) {
+      return json({ success: false, message: '目标步数必须为 1–98,800 之间的整数。' }, 400)
     }
 
     const { loginToken, userId } = await login(account, password)
