@@ -104,8 +104,8 @@ async function submit() {
           </svg>
         </div>
         <div>
-          <p class="eyebrow">ZEPP LIFE</p>
-          <h1>Steps Tool</h1>
+          <p class="eyebrow">茂神</p>
+          <h1>步数修改器</h1>
         </div>
       </div>
 
@@ -241,7 +241,7 @@ async function submit() {
     </section>
 
     <footer class="site-footer">
-      <p class="footer-text">Zepp Life Steps · Cloudflare Pages Functions</p>
+      <p class="footer-text">中国人能飞 · 我已起飞</p>
 
       <a
         class="repo-link"
