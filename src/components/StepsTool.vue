@@ -20,7 +20,7 @@ const statusType = ref('idle')
 const statusMessage = ref('')
 const currentStage = ref('')
 
-const buttonText = computed(() => (loading.value ? '处理中…' : '修改步数'))
+const buttonText = computed(() => (loading.value ? '处理中…' : '起飞'))
 
 function randomizeSteps() {
   steps.value = createRandomSteps()
@@ -118,7 +118,8 @@ async function submit() {
           <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
           <path d="M12 10.2v5.1M12 7.2v.15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span>请先通过账号密码注册 Zepp Life 账号；一键登录方式不适用。</span>
+        <span>请先通过账号密码注册 Zepp Life 账号；不要一键登录。</span>
+        <span>然后在“账号与安全”中绑定微信。</span>
       </div>
 
       <form class="form" @submit.prevent="submit">
@@ -241,7 +242,7 @@ async function submit() {
     </section>
 
     <footer class="site-footer">
-      <p class="footer-text">中国人能飞 · 我已起飞</p>
+      <p class="footer-text">中国人能飞 · 起飞记得给我点个⭐Star ↓</p>
 
       <a
         class="repo-link"
