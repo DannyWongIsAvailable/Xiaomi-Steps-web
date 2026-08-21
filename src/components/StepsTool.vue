@@ -118,8 +118,7 @@ async function submit() {
           <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
           <path d="M12 10.2v5.1M12 7.2v.15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span>请先通过账号密码注册 Zepp Life 账号；不要一键登录。</span>
-        <span>然后在“账号与安全”中绑定微信。</span>
+        <span>请先通过账号密码注册 Zepp Life 账号，不要一键登录。然后在“账号与安全”中绑定微信。</span>
       </div>
 
       <form class="form" @submit.prevent="submit">
