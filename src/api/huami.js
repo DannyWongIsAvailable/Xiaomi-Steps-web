@@ -9,7 +9,7 @@ export async function modifySteps(account, password, steps, onProgress) {
     throw new Error('请输入有效的目标步数。')
   }
 
-  onProgress?.('submit', '正在通过 Cloudflare Function 登录并提交步数…')
+  onProgress?.('submit', '正在登录并提交步数…')
 
   try {
     const response = await axios.post(
@@ -17,11 +17,11 @@ export async function modifySteps(account, password, steps, onProgress) {
       {
         account: account.trim(),
         password,
-        steps: parsedSteps,
+        steps: parsedSteps
       },
       {
         headers: { 'Content-Type': 'application/json' },
-        timeout: 30000,
+        timeout: 30000
       },
     )
 
@@ -36,7 +36,7 @@ export async function modifySteps(account, password, steps, onProgress) {
       if (apiMessage) throw new Error(apiMessage)
       if (!error.response) {
         throw new Error(
-          '无法访问 /api/steps。若你正在使用 pnpm dev，本地 Vite 不会运行 Cloudflare Pages Functions；请部署到 Cloudflare Pages 后测试。',
+          '无法访问 /api/steps。',
         )
       }
       throw new Error(`请求失败（HTTP ${error.response.status}）。`)

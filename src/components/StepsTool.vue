@@ -99,9 +99,7 @@ async function submit() {
     <section class="app-card">
       <div class="brand-row">
         <div class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M5 12.25 9.1 16 19 6.8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <img src="../assets/logo.png" alt="" />
         </div>
         <div>
           <p class="eyebrow">茂神</p>
@@ -118,7 +116,7 @@ async function submit() {
           <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
           <path d="M12 10.2v5.1M12 7.2v.15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span>请先通过账号密码注册 Zepp Life 账号，不要一键登录。然后在“账号与安全”中绑定微信。</span>
+        <span>请先通过账号密码注册 Zepp Life 账号，不要一键登录。然后在“第三方接入”中绑定微信。</span>
       </div>
 
       <form class="form" @submit.prevent="submit">
